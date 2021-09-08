@@ -1,107 +1,71 @@
- <html>
- <head>
-	<meta charset="utf-8">
-	<link rel="stylesheet" type="text/css" href="style.css" media="screen" />
-	<script src="https://kit.fontawesome.com/f00c14539b.js" crossorigin="anonymous"></script>
-	<title>Start</title>
- </head>
- <body>
-	<div class="container">
-		<div id="time" class="time"></div>
+<!DOCTYPE html>
+<html lang="us">
+	<head>
+		<title>ようこそ</title>
+		<meta charset="utf-8"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta name="theme-color" content="#79acf3">
+		<meta name="mobile-web-app-capable" content="yes">
+
+		<link rel="stylesheet" type="text/css" href="style.css">
+		<link rel="icon" href="./favicon.ico">
+
+		<link rel="preconnect" href="https://fonts.gstatic.com">
+		<link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,900&display=swap" rel="stylesheet">
 		
-		<form method="GET" action="http://www.google.com/search">
-			<input name="as_q" class="search-field" autofocus>
-			<button type="submit" class="search-submit" value="" style="fill: white"></button>
-		</form>
-		
-		<div class="box">
-			<div class="box-container">
-				<div class="heading">Entertainment</div>
-				<a href="https://www.youtube.com/?gl=CH"  >
-					<div class="link" tabindex="1">Youtube</div>
-				</a>
-				<a href="https://www.netflix.com/de/"  >
-					<div class="link" tabindex="2">Netflix</div>
-				</a>
-				<a href="https://app.plex.tv"  >
-					<div class="link" tabindex="3">Plex</div>
-				</a>
-				<a href="https://twist.moe/"  >
-					<div class="link" tabindex="4">Anime</div>
-				</a>
+		<script src="./config.js"></script>
+	</head>
+	<body>
+		<div class="column-container">
+			<div class="left">
+				<img id="cover">
 			</div>
-			<div class="box-container">
-				<div class="heading">Work</div>
-				<a href="https://hexagongeosystems.service-now.com/nav_to.do?uri=%2Fhome.do%3Fsysparm_auto_request%3Dtrue"  >
-					<div class="link" tabindex="5">Service-Now</div>
-				</a>
-				<a href="http://adaxes/adaxes/itsupport#/SignIn"   >
-					<div class="link" tabindex="6">Active-Directory</div>
-				</a>
-				<a href="https://rs.hexagon.com"  >
-					<div class="link" tabindex="7">Remote-Support</div>
-				</a>
-				<a href="https://endpoint.microsoft.com/#home"  >
-					<div class="link" tabindex="8">AutoPilot</div>
-				</a>
+
+			<div class="right">
+				<div id="greetings"></div>
+				<div class="search_box">
+					<form id="search" method="get">
+					<input id="input_box" class="input_box" type="text" name="q" autocomplete="off"/>
+					</form>
+				</div>
+				<div class="container">
+					<div class="column">
+						<p>Entertainment</p>
+						<a class="link" href="https://www.youtube.com/?gl=CH">YouTube</a>
+						<a class="link" href="https://app.plex.tv">Plex</a>
+						<a class="link" href="https://www.crunchyroll.com/">Anime</a>
+					</div>
+					<div class="column">
+						<p>Work</p>
+						<a class="link" href="https://hexagongeosystems.service-now.com/nav_to.do?uri=%2Fhome.do%3Fsysparm_auto_request%3Dtrue">Service-Now</a>
+						<a class="link" href="https://rs.hexagon.com">Remote-Support</a>
+						<a class="link" href="https://endpoint.microsoft.com/#home">Endpoint</a>
+						<a class="link" href="https://portal.azure.com/#blade/Microsoft_Azure_PIMCommon/ActivationMenuBlade/aadmigratedroles/provider/aadroles">Azure Roles</a>
+					</div>
+					<div class="column">
+						<p>Social stuff</p>
+						<a class="link" href="https://www.instagram.com/">Instagram</a>
+						<a class="link" href="https://web.whatsapp.com">WhatsApp</a>
+						<a class="link" href="https://myanimelist.net/">MAL</a>
+					</div>
+					<div class="column">
+						<p>Torrents</p>
+						<a class="link" href="https://1337x.to/home/">1337X</a>
+						<a class="link" href="https://www.acgnx.se/">AcgnX</a>
+						<a class="link" href="https://nyaa.si/">Nyaa</a>
+						<a class="link" href="https://anidex.info/">AniDex</a>						
+					</div>
+				</div>
 			</div>
-			<div class="box-container">
-				<div class="heading">r/</div>
-				<a href="https://www.reddit.com/r/wallpaper/"  >
-					<div class="link" tabindex="9">Wallpaper</div>
-				</a>
-				<a href="https://www.reddit.com/r/torrents"  >
-					<div class="link" tabindex="10">Torrents</div>
-				</a>
-				<a href="https://www.reddit.com/r/interestingasfuck/"  >
-					<div class="link" tabindex="11">Interesting</div>
-				</a>
-				<a href="https://www.reddit.com/r/BoneAppleTea"  >
-					<div class="link" tabindex="12">Bone-Apple-Tea</div>
-				</a>
+
+			<div id="date"></div>
+
+			<div id="toggle">
+				<span></span>
+				<span></span>
 			</div>
-			<div class="box-container">
-				<div class="heading">Social</div>
-				<a href="https://web.whatsapp.com"  >
-					<div class="link" tabindex="13">Whatsapp</div>
-				</a>
-				<a href="https://www.instagram.com/"  >
-					<div class="link" tabindex="14">Instagram</div>
-				</a>
-				<a href="https://twitter.com/home"  >
-					<div class="link" tabindex="15">Twitter</div>
-				</a>
-				<a href="https://myanimelist.net/"  >
-					<div class="link" tabindex="16">Anime-List</div>
-				</a>
-			</div>
-			<div class="box-container">
-				<div class="heading" >Torrents</div>
-				<a href="https://1337x.to/home/"  >
-					<div class="link" tabindex="17">1337X</div>
-				</a>
-				<a href="https://www.acgnx.se/"  >
-					<div class="link" tabindex="18">AcgnX</div>
-				</a>
-				<a href="https://nyaa.si/"  >
-					<div class="link" tabindex="19">Nyaa</div>
-				</a>
-				<a href="https://anidex.info/"  >
-					<div class="link" tabindex="20">AniDex</div>
-				</a>
-			</div>
-		</div>
-	</div>
-	
-	
-	<div class="wave-container">
-		<div class="wave wave1"></div>
-		<div class="wave wave2"></div>
-		<div class="wave wave3"></div>
-		<div class="wave wave4"></div>
-	</div>
-	
-	<script src="script.js"></script>
-	
- </body>
- </html>
+
+		<script src="./scripts/config.js"></script>
+		<script src="./scripts/darkmode.js"></script>
+	</body>
+</html>
